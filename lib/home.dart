@@ -7,6 +7,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final methods = Methods();
     return Scaffold(
       backgroundColor: MyColors.background1,
       appBar: AppBar(
@@ -20,11 +21,11 @@ class HomePage extends StatelessWidget {
       body: Column(
         children: [
           Expanded(
-            child: Methods.buildDisplay("0", "0"),
+            child: methods.buildDisplay(),
           ),
           Expanded(
             flex: 2,
-            child: Methods.buildButtons(),
+            child: methods.buildButtons(),
           ),
         ],
       ),
